@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("exercício 1")
+        console.log(!10) // false
+        console.log(!!"String") // true
+        console.log(!!2.3) // true
+        console.log(Boolean(null)) // false
+
+        console.log("exercício 2")
+        console.log(10 > 2) // false
+        console.log(5 >= "5") // true
+        console.log(5 >= "5") // erro de syntax
+        console.log("apple" > "pineapple") // true
+        console.log("2" > "12") // true
+        console.log(undefined == null) // true
+        console.log(undefined === null) // false
+        console.log(null == "\n0\n") // false
+        console.log(null === +"\n0\n") // false
+
+        console.log("exercício 3")
+        let a = Number(prompt("Digite o valor de A: "))
+        if (a > 10) {
+            console.log(`O valor A é maior do que 10`)
+        }
+        console.log(`Programa finalizado...`)
+
+        console.log("exercício 4")
+        let numero = Number(prompt("Digite um valor: "))
+        if (numero % 2 == 0) {
+            console.log(`A metade do seu número é ${numero / 2}`)
+        }
+        console.log("Programa finalizado...")
+
+        console.log("exercício 5")
+        let numb = Number(prompt("Digite um valor: "))
+        if (numb % 2 == 0) {
+            console.log(`O número é par`)
+        } else {
+            console.log("O número é ímpar")
+        }
+
+        console.log("exercício 6")
+        let numeri = Number(prompt("Digite um valor: "))
+        if (20 < numeri && numeri < 90) {
+            console.log("O número está na faixa entre 20 e 90")
+        } else {
+            console.log("O número está fora da faixa")
+        }
+
+        console.log("exercício 7")
+        A = 10
+        B = 20
+        Boolean(A > 10 && B <= 20) // false
+        Boolean(A > 10 || B <= 20) // true
+        Boolean((A === 10 || B > 20) && B === 20) // true
+        console.log(null || 2 || undefined) // true
+        Boolean(0 && 1) // true
+
+        console.log("exercício 8")
+        let num1 = Number(prompt("Digite um valor: "))
+        let num2 = Number(prompt("Digite um valor: "))
+        let num3 = Number(prompt("Digite um valor: "))
+        if(num1 > num2 && num1 > num3){console.log(`Saída \n O maior número é ${num1}`)}
+        if(num2 > num1 && num2 > num3){console.log(`Saída \n O maior número é ${num2}`)}
+        if(num3 > num1 && num3 > num2){console.log(`Saída \n O maior número é ${num3}`)}
+        
+        console.log("exercício 9")
+        let numero1 = Number(prompt("Digite um valor:"))
+        let numero2 = Number(prompt("Digite um valor:"))
+        numero1 + numero2 > 4 ? console.log("O número é maior que 4!") : console.log("O número é menor que 4")
+
+        console.log("exercício 10")
+        let lado1= Number(prompt("Digite um valor do lado 1"))
+        let lado2= Number(prompt("Digite um valor do lado 2"))
+        let lado3= Number(prompt("Digite um valor do lado 3"))
+        if (lado1 === lado2 && lado1 != lado3) {
+            console.log ("O triangulo é Equilátero")
+        }
+        else if (lado1 === lado2 && lado1 != lado3) {
+            console.log ("O triangulo é Isósceles")
+        }
+        else if (lado2 === lado3 && lado2 != lado1) {
+            console.log ("O triangulo é Isósceles")
+        }
+        else if (lado3 === lado1 && lado3 != lado2) {
+            console.log ("O triangulo é Isósceles")
+        }
+        else {
+             console.log("O triangulo é Escaleno")
+        }
+
+        console.log("exercício 11")
+        let num = Number(prompt("Digite um valor: "))
+        if (num >= 0) {
+        let raiz = num ** (1/2)
+            console.log(`A raiz quadrada de ${num} é ${raiz}.`)
+        }
+        else {
+            console.log ("Número invalido")
+        }
+
+        console .log("exercício 12")
+        let men = Number(prompt("Digite um valor: "))
+        if (men % 5 === 0) {
+            console.log(`O número é divisível por ${men / 5}`)
+        } 
+        else {
+            console.log(`O número não é divisível por ${men / 5}`) 
+        } 
+
+        console.log("exercício 13")
+        let numer0 = Number(prompt("Digite um valor: "))
+
+
+
+
+        
+        console.log("exercício 14")
+        let salario = Number(prompt("Digite o salário"))
+        let prestacao = Number(prompt("Digite valor da prestação"))
+        id (prestação > (0.20 * salário)) {
+            console.log("Empréstimo não concedido")
+        }
+        else {
+            console.log("Empréstimo concedido")
+        }
+
+            </script>
+        </body>
+        </html>
