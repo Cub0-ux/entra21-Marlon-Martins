@@ -169,3 +169,91 @@
         } else {
         console.log("Você pode doar")
         }
+
+        console.log("exercício 19")
+        let diaDaSemana = Number(prompt("Digite um número de 1 a 7"))
+        switch (diaDaSemana) {
+        case 1:
+        console.log("Domingo!")
+        break
+        case 2:
+        console.log("Segunda-Feira!")
+        break
+        case 3:
+        console.log("Terça-Feira!")
+        break
+        case 4:
+        console.log("Quarta-Feira!")
+        break
+        case 5:
+        console.log("Quinta-Feira!")
+        break
+        case 6:
+        console.log("Sexta-Feira!")
+        break
+        case 7:
+        console.log("Sábado!")
+        break
+        default:
+        console.log("\033[31mValor Inválido!")
+        }
+
+        console.log("exercício 20")
+        let numero = Number(prompt("Digite um número de 1 a 12"))
+        switch (numero) {
+        case 1:
+        console.log("Janeiro")
+        break;
+        case 2:
+        console.log("Fevereiro")
+        break;
+        case 3:
+        console.log("Março")
+        break;
+        case 4:
+        console.log("Abril")
+        break;
+        case 5:
+        console.log("Maio")
+        break;
+        case 6:
+        console.log("Junho")
+        break;
+        case 7:
+        console.log("Julho")
+        break;
+        case 8:
+        console.log("Agosto")
+        break;
+        case 9:
+        console.log("Setembro")
+        break;
+        case 10:
+        console.log("Outubro")
+        break;
+        case 11:
+        console.log("Novembro")
+        break;
+        case 12:
+        console.log("Dezembro")
+        break;
+        default:
+        console.log("\033[31mValor Inválido!")
+
+        console.log("exercício 21")
+        let turno = prompt("Qual seu turno?\n[ M ] para matutino\n[ V ] para vespertino\n[ N ] para noturno").toUpperCase()
+        switch (turno) {
+        case "M":
+        console.log("Bom Dia!")
+        break;
+        case "V":
+        console.log("Boa Tarde!")
+        break;
+        case "N":
+        console.log("Boa Noite!")
+        break;
+        default:
+        console.log("\033[31mValor Inválido!")
+        }
+
+

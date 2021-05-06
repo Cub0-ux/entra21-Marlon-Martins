@@ -7,16 +7,21 @@
 </head>
 <body>
     <script>
-        console.log("exercício 18")
-    let idade = Number(prompt("Qual é a sua idade?"))
-    if (idade < 18|| idade > 67) {
-    console.log("Você não pode doar")
-    } else {
-    console.log("Você pode doar")
-    }
-
-
-
+        console.log("exercício 21")
+        let turno = prompt("Qual seu turno?\n[ M ] para matutino\n[ V ] para vespertino\n[ N ] para noturno").toUpperCase()
+        switch (turno) {
+        case "M":
+        console.log("Bom Dia!")
+        break;
+        case "V":
+        console.log("Boa Tarde!")
+        break;
+        case "N":
+        console.log("Boa Noite!")
+        break;
+        default:
+        console.log("\033[31mValor Inválido!")
+        }
             </script>
         </body>
         </html>
