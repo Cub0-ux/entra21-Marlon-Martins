@@ -1,0 +1,62 @@
+
+1)
+console.log("exercício 1")
+//for//
+/*let i = 0
+for (i; i < 10; i++) {
+console.log("Olá, Mundo!")
+}*/
+//while//
+/*let i = 0
+while (i < 10) {
+console.log("Olá, Mundo!")
+i++
+}*/
+//do while//
+/*let i = 0
+do {
+console.log("Olá, Mundo!")
+i++
+} while (i < 10)*/
+
+
+2)
+console.log("exercício 2")
+//for//
+/*for (let i = 0; i < 10; ++i) {
+console.log(`Estou aparecendo na tela ${i + 1}`)
+}
+*/
+//while//
+/*let i = 0
+while (i < 10) {
+console.log(`Estou aparecendo na tela ${++i}`)
+}*/
+//do while//
+/*let i = 0
+do {
+console.log(`Estou aparecendo na tela ${++i}`)
+} while (i < 10)*/
+
+
+3)
+console.log("exercício 3")
+for (let i = 10; i > 0; i--) {
+console.log(i)
+}
+console.log("FIM")
+
+
+4)
+console.log("exercício 4")
+for (let i = 0; i < 3; i++) {
+let numero1 = +prompt("Digite o primeiro número")
+let numero2 = +prompt("Digite o segundo número")
+
+let subtracao = numero1 - numero2
+
+console.log(`${numero1} - ${numero2} = ${subtracao}`)
+}
+
+5)
+console.log("exercício 5")
