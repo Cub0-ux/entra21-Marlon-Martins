@@ -58,5 +58,44 @@ let subtracao = numero1 - numero2
 console.log(`${numero1} - ${numero2} = ${subtracao}`)
 }
 
+
 5)
 console.log("exercício 5")
+for (let i = 1000; i <= 100000; i+=1000) {
+    console.log(i)
+}
+
+
+6)
+console.log("exercício 6")
+let soma = 0
+let media = 0
+for (let i = 5; i > 0; i--) {
+    let valor = +prompt("Digite um valor")
+    soma += valor
+    media += valor / 5
+}
+console.log(`Soma ${soma}\n Média ${media.toFixed(2)}`)
+
+
+7)
+console.log("exercício 7)
+let n = +prompt("Digite um valor")
+for (let i = 0; i <= n; i++) {
+    if (i % 2 === 1) {
+        console.log(i)
+    }
+}
+
+
+8)
+console.log("exercício 8")
+let numero = +prompt("Digite um numero")
+for (let i = 1; i <= 10; i++) {
+    let conta = numero * i
+    console.log(`${numero} x ${i} = ${conta}`)
+}
+
+
+10)
+console.log("exercício 10")
