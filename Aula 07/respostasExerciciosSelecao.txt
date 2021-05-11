@@ -90,7 +90,7 @@
         console.log("exercício 11")
         let num = Number(prompt("Digite um valor: "))
         if (num >= 0) {
-        let raiz = num ** (1/2)
+        let raiz = num * (1/2)
             console.log(`A raiz quadrada de ${num} é ${raiz}.`)
         }
         else {
@@ -162,6 +162,7 @@
          c >= a && c >= b && b >= a
             console.log(`A ordem decrescente é ${c}, ${b}, ${a}`)
         }
+        
         console.log("exercício 18")
         let idade = Number(prompt("Qual é a sua idade?"))
         if (idade < 18|| idade > 67) {
