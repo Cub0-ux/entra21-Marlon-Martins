@@ -1,0 +1,128 @@
+1)
+console.log("exercício 1")
+let vetor = [],
+    pares = 0
+for (let i = 0; i < 10; i++){
+    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+
+    if (vetor[i] % 2 === 0) pares++
+}
+console.log(`A quantidade de números pares digitados foi ${pares}`)
+
+____________________________________________________________________________________________________
+2)
+console.log("exercício 2")
+let vetor = [],
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite ${i + 1}º valor`)
+}
+
+let maior = Math.max.apply(null, vetor)
+console.log(`O maior número é ${maior}, que se encontra na ${vetor.indexOf(maior, 1) + 1}º posição`)
+console.log(vetor)
+
+____________________________________________________________________________________________________
+3)
+console.log("exercício 3")
+let vetor = [],
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite o valor da ${i + 1}º posição`)
+}
+
+console.log(`Maior valor é ${Math.max.apply(null, vetor)}`)
+console.log(`Menor valor é ${Math.min.apply(null, vetor)}`)
+
+____________________________________________________________________________________________________
+4)
+console.log("exercício 4")
+let vetor = [],
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite o valor para a ${i + 1}º posição`)
+}
+
+let inverso = vetor.slice()
+console.log(vetor)
+console.log(inverso.reverse())
+
+____________________________________________________________________________________________________
+5)
+console.log("exercício 5")
+vetor = [],
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite o ${i + 1}º nome`)
+}
+let nome= prompt("digite o nome a ser encontrado")
+
+let flag
+for(let i = 0, tamanhoVetor = vetor.length; i< tamanhoVetor; i++) {
+    if ( vetor[i] === nome ) {
+        flag = true
+        break
+    }
+}
+
+flag ? console.log("Não achei") : console.log("Achei")
+____________________________________________________________________________________________________
+6)
+console.log("exercício 6")
+
+____________________________________________________________________________________________________
+7)
+console.log("exercício 7")
+
+____________________________________________________________________________________________________
+8)
+console.log("exercício 8")
+console.log("exercício 8")
+let vetor = [],
+    pares = 0
+for (let i = 0; i < 6; i++){
+    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+
+    if (vetor[i] % 2 === 0) pares++
+}
+let inverso = vetor.slice()
+console.log(vetor)
+console.log(inverso.reverse())
+
+____________________________________________________________________________________________________ 
+9)
+console.log("exercício 9")
+
+____________________________________________________________________________________________________
+10)
+console.log("exercício 10")
+
+____________________________________________________________________________________________________
+11)
+console.log("exercício 11")
+let vetor = [],
+let i = 0
+let maior = 0
+let menor = 0
+let maiorPosicao = 0
+let menorPosicao = 0
+let valor = 0
+for(i=0; i<5; i++) {
+    console.log("Digite um número ")
+    vetor[i] = +prompt(`Digite o ${i + 1}º valor `)
+
+    if (i == 0) {
+    maior = valor
+    menor = valor
+    maiorPosicao = i
+    menorPosicao = i
+
+    }
+    if (valor > maior) { 
+    maior = valor
+    maiorPosicao = i
+
+    }
+    if (valor < menor) {
+    menor = valor
+    menorPosicao = i
+    }
+}
+console.log(`\n Maior valor:${maior}   Posicao:${maiorPosicao} `)
+console.log(`\n Menor valor:${menor}   Posicao:${menorPosicao} `)
