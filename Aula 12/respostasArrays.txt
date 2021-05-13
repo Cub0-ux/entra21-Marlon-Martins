@@ -65,22 +65,27 @@ flag ? console.log("Não achei") : console.log("Achei")
 ____________________________________________________________________________________________________
 6)
 console.log("exercício 6")
+let vetor = [1, 0, 5, -2, -5, 7]
+let soma = vetor[0] + vetor[1] + vetor[5]
+console.log(`soma :${soma}`)
+vetor [4] = 100
+console.log(vetor)
 
 ____________________________________________________________________________________________________
 7)
 console.log("exercício 7")
-
+let vetor = [],
+    pares = 0
+for (let i = 0; i < 6; i++){
+    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
 ____________________________________________________________________________________________________
 8)
-console.log("exercício 8")
 console.log("exercício 8")
 let vetor = [],
     pares = 0
 for (let i = 0; i < 6; i++){
     vetor[i] = +prompt(`Digite o ${i+1}º valor`)
 
-    if (vetor[i] % 2 === 0) pares++
-}
 let inverso = vetor.slice()
 console.log(vetor)
 console.log(inverso.reverse())
@@ -88,24 +93,31 @@ console.log(inverso.reverse())
 ____________________________________________________________________________________________________ 
 9)
 console.log("exercício 9")
+let vetor = [],
+    pares = 0
+for (let i = 0; i < 6; i++){
+    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
 
 ____________________________________________________________________________________________________
 10)
 console.log("exercício 10")
-
+let vetor = [],
+    pares = 0
+for (let i = 0; i < 6; i++){
+    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
 ____________________________________________________________________________________________________
 11)
 console.log("exercício 11")
 let vetor = [],
-let i = 0
-let maior = 0
-let menor = 0
-let maiorPosicao = 0
-let menorPosicao = 0
-let valor = 0
 for(i=0; i<5; i++) {
     console.log("Digite um número ")
     vetor[i] = +prompt(`Digite o ${i + 1}º valor `)
+    let i = 0
+    let maior = 0
+    let menor = 0
+    let maiorPosicao = 0
+    let menorPosicao = 0
+    let valor = 0
 
     if (i == 0) {
     maior = valor
@@ -126,3 +138,98 @@ for(i=0; i<5; i++) {
 }
 console.log(`\n Maior valor:${maior}   Posicao:${maiorPosicao} `)
 console.log(`\n Menor valor:${menor}   Posicao:${menorPosicao} `)
+
+____________________________________________________________________________________________________
+12)
+console.log("exercício 12")
+let vetor = []
+for (let i = 0; i < 100; i++) {
+    vetor[i] = Math.floor(Math.random() * (7 - 1) + 1)
+}
+let vetorContadores0 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 1:
+            vetor[0]++
+            break
+    }
+}
+let vetorContadores1 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 2:
+            vetor[1]++
+            break
+    }
+}
+let vetorContadores2 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 3: 
+            vetor[2]++
+            break
+    }
+}
+let vetorContadores3 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 4: 
+            vetor[3]++
+            break
+    }
+}
+let vetorContadores4 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 5: 
+            vetor[3]++
+            break
+    }
+}
+let vetorContadores5 = [0,0,0,0,0,0]
+for (let i = 0; i < 100; i++) {
+    switch (vetor[i]) {
+        case 6: 
+            vetor[3]++
+            break
+    }
+}
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
+    console.log(vetor[i])
+}
+console.log("A quantidade de vezes que o número apareceu foi")
+
+____________________________________________________________________________________________________
+13)
+console.log("exercício 13")
+
+____________________________________________________________________________________________________
+14)
+console.log("exercício 14")
+
+____________________________________________________________________________________________________
+15)
+console.log("exercício 15")
+
+____________________________________________________________________________________________________
+16)
+console.log("exercício 16")
+
+____________________________________________________________________________________________________
+17)
+console.log("exercício 17")
+
+____________________________________________________________________________________________________
+18)
+console.log("exercício 18")
+
+____________________________________________________________________________________________________
+19)
+console.log("exercício 19")
+
+____________________________________________________________________________________________________
+20)console.log("exercício 20)
+
+____________________________________________________________________________________________________
+21)
+console.log("exercício 21")
