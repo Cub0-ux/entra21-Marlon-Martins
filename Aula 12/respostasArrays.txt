@@ -74,14 +74,19 @@ console.log(vetor)
 ____________________________________________________________________________________________________
 7)
 console.log("exercício 7")
-let vetor = [],
-    pares = 0
-for (let i = 0; i < 6; i++){
-    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+let vetor = []
+let vetorAoQuadrado = []
+
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite um numero para a posição ${i + 1}`)
+    vetorAoQuadrado[i] = vetor[i] ** 2
+}
+console.log(vetor)
+console.log(vetorAoQuadrado)
 ____________________________________________________________________________________________________
 8)
 console.log("exercício 8")
-let vetor = [],
+let vetor = []
     pares = 0
 for (let i = 0; i < 6; i++){
     vetor[i] = +prompt(`Digite o ${i+1}º valor`)
@@ -93,18 +98,27 @@ console.log(inverso.reverse())
 ____________________________________________________________________________________________________ 
 9)
 console.log("exercício 9")
-let vetor = [],
-    pares = 0
-for (let i = 0; i < 6; i++){
-    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+
 
 ____________________________________________________________________________________________________
 10)
 console.log("exercício 10")
-let vetor = [],
-    pares = 0
-for (let i = 0; i < 6; i++){
-    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+let vetor = []
+
+let qtdNegativos = 0
+let positivos = 0
+for (let i = 0; i < 10; i++) {
+    vetor[i] = +prompt(`Digite o valor da ${i+1}º posição`)       
+
+    if (vetor[i] < 0) {
+        qtdNegativos++
+    } else {
+        positivos += vetor[i]
+    }
+}
+
+console.log(`Quantidade de negativos: ${qtdNegativos}`)
+console.log(`Soma dos positivos: ${positivos}`)
 ____________________________________________________________________________________________________
 11)
 console.log("exercício 11")
@@ -146,58 +160,33 @@ let vetor = []
 for (let i = 0; i < 100; i++) {
     vetor[i] = Math.floor(Math.random() * (7 - 1) + 1)
 }
-let vetorContadores0 = [0,0,0,0,0,0]
+let vetorContadores = [0,0,0,0,0,0]
 for (let i = 0; i < 100; i++) {
     switch (vetor[i]) {
         case 1:
-            vetor[0]++
+            vetorContadores[0]++
             break
-    }
-}
-let vetorContadores1 = [0,0,0,0,0,0]
-for (let i = 0; i < 100; i++) {
-    switch (vetor[i]) {
         case 2:
-            vetor[1]++
-            break
-    }
-}
-let vetorContadores2 = [0,0,0,0,0,0]
-for (let i = 0; i < 100; i++) {
-    switch (vetor[i]) {
+            vetorContadores[1]++
+            break    
         case 3: 
-            vetor[2]++
-            break
-    }
-}
-let vetorContadores3 = [0,0,0,0,0,0]
-for (let i = 0; i < 100; i++) {
-    switch (vetor[i]) {
+            vetorContadores[2]++
+            break   
         case 4: 
-            vetor[3]++
+            vetorContadores[3]++
             break
-    }
-}
-let vetorContadores4 = [0,0,0,0,0,0]
-for (let i = 0; i < 100; i++) {
-    switch (vetor[i]) {
         case 5: 
-            vetor[3]++
+            vetorContadores[4]++
             break
-    }
-}
-let vetorContadores5 = [0,0,0,0,0,0]
-for (let i = 0; i < 100; i++) {
-    switch (vetor[i]) {
         case 6: 
-            vetor[3]++
+            vetorContadores[5]++
             break
     }
 }
-for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
-    console.log(vetor[i])
+
+for(let i = 0; i < 6; i++) {
+    console.log(`A quantidade de vezes que o número ${i+1} apareceu foi ${vetorContadores[i]}`)
 }
-console.log("A quantidade de vezes que o número apareceu foi")
 
 ____________________________________________________________________________________________________
 13)

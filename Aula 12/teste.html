@@ -7,14 +7,23 @@
 </head>
 <body>
     <script>
-        console.log("exercício 15")
-        let vetor = [0,0,0,0,0,0] 
-            pares = 0
-        for (let i = 0; i < 5; i++){
-        vetor[i] = +prompt(`Digite o ${i+1}º valor`)
-            console.log(vetor[i])
+        console.log("exercício 10")
+        let vetor = []
+        
+        let qtdNegativos = 0
+        let positivos = 0
+        for (let i = 0; i < 10; i++) {
+            vetor[i] = +prompt(`Digite o valor da ${i+1}º posição`)       
+
+            if (vetor[i] < 0) {
+                qtdNegativos++
+            } else {
+                positivos += vetor[i]
+            }
         }
         
+        console.log(`Quantidade de negativos: ${qtdNegativos}`)
+        console.log(`Soma dos positivos: ${positivos}`)                 
      </script>
 </body>
 </html>
