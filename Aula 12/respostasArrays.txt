@@ -86,19 +86,51 @@ console.log(vetorAoQuadrado)
 ____________________________________________________________________________________________________
 8)
 console.log("exercício 8")
-let vetor = []
-    pares = 0
-for (let i = 0; i < 6; i++){
-    vetor[i] = +prompt(`Digite o ${i+1}º valor`)
+let pares = [],
+    contadorPares = 0
+while (contadorPares < 6) {
+    let numero = +prompt("Digite um número par")
+    if (numero % 2 != 0) {
+        alert("O número digitado é inválido")
+        continue
+    }
+    pares[contadorPares] = numero
+    contadorPares++
+}
 
-let inverso = vetor.slice()
-console.log(vetor)
-console.log(inverso.reverse())
+for (let i = pares.length - 1; i >= 0; i--) {
+    console.log(pares[i])
+}
+}
 
 ____________________________________________________________________________________________________ 
 9)
 console.log("exercício 9")
+let numeros = []
+for (let i = 0; i < 8; i++) {
+    numeros[i] = +prompt("Digite um número")
+}
 
+while (true) {
+    x = +prompt("Digite o valor de X")                
+
+    if (x > 0 && x < 8) break
+
+    alert("Valor inválido digite novamente")
+}            
+
+while (true) {
+    y = +prompt("Digite o valor de Y")                
+
+    if (y > 0 && y < 8) break
+
+    alert("Valor inválido digite novamente")
+}
+
+let soma = numeros[x] + numeros[y]
+console.log(`Vetor: ${numeros}`)
+console.log(`A soma de ${numeros[x]} e ${numeros[y]} é: ${soma}`)
+}
 
 ____________________________________________________________________________________________________
 10)
@@ -191,34 +223,233 @@ for(let i = 0; i < 6; i++) {
 ____________________________________________________________________________________________________
 13)
 console.log("exercício 13")
+let notas = [],
+    i = 0
 
+while (true) {
+    nota = +prompt(`Digite a nota do ${i + 1} aluno`)
+
+    if (nota < 0) break
+
+    notas[i] = nota                
+    i++
+}
+
+let maiorNota = 0,
+    acumuladorNotas = 0                
+for (let nota of notas) {
+    if (nota > maiorNota) maiorNota = nota
+
+    acumuladorNotas += nota
+}   
+
+let media = acumuladorNotas / notas.length
+
+console.log(`Notas: ${notas}`)
+console.log(`Média da turma: ${media.toFixed(2)}\nMaior nota: ${maiorNota}`)
+}
 ____________________________________________________________________________________________________
 14)
 console.log("exercício 14")
+let vetor1 = [],
+    vetor2 = []
 
+for (let i = 0; i < 5; i++) {
+    vetor1[i] = prompt(`Digite o valor da posição ${i + 1} do primeiro vetor`)
+}
+
+let iguais = true
+for (let i = 0; i < 5; i++) {
+    vetor2[i] = prompt(`Digite o valor da posição ${i + 1} do segundo vetor`)
+
+    if (vetor1[i] != vetor2[i]) iguais = false
+}            
+
+console.log(`Vetor 1: ${vetor1}\nVetor 2: ${vetor2}`)
+iguais ? console.log("Os vetores são iguais") : console.log("Os vetores são diferentes")
+}
 ____________________________________________________________________________________________________
 15)
 console.log("exercício 15")
+let vetor1 = [],
+    vetor2 = []
 
+for (let i = 0; i < 5; i++) {
+    vetor1[i] = prompt(`Digite o valor da posição ${i + 1} do primeiro vetor`)
+}
+
+let interseccao = []
+for (let i = 0; i < 5; i++) {
+    vetor2[i] = prompt(`Digite o valor da posição ${i + 1} do segundo vetor`)                
+
+    for (let j = 0; j < 5; j++) {
+        if (vetor1[j] === vetor2[i]) {                        
+            interseccao.push(vetor1[j])
+            break
+        }
+    }
+}            
+
+console.log(`Vetor 1: [${vetor1}]\nVetor 2: [${vetor2}]\nIntersecção: [${interseccao}]`)            
+}
 ____________________________________________________________________________________________________
 16)
 console.log("exercício 16")
+let numero1 = +prompt("Digite o primeiro número"),
+    numero2 = +prompt("Digite o segundo número"),
+    aux = numero1
 
+if (numero1 > numero2) {
+    numero1 = numero2
+    numero2 = aux
+}            
+
+for (let i = numero1; i <= numero2; i += 2) {
+    console.log(i)
+}
+}
 ____________________________________________________________________________________________________
 17)
 console.log("exercício 17")
+let vetor = []
+for (let i = 0; i < 10; i++) {
+    vetor[i] = Math.floor(Math.random() * (11 - 1)) + 1
+}
 
+console.log(`Vetor: ${vetor}\n`)   
+
+
+let ultimoIndiceVetor = vetor.length - 1,
+    trocou
+
+for (let i = 0; i < ultimoIndiceVetor; i++) {
+    trocou = false
+    for (let j = 0; j < ultimoIndiceVetor; j++) {
+        if (vetor[j] > vetor[j + 1]) {
+            let aux = vetor[j]
+            vetor[j] = vetor[j + 1]
+            vetor[j + 1] = aux
+
+            trocou = true
+        }
+    }
+
+    if (!trocou) break
+}
+
+console.log(`Vetor ordenado: ${vetor}`)
+
+    Selection sort
+    let vetor = [1, 0, 9, 2, 7, 13, 1]
+
+    let tamanhoVetor = vetor.length
+    for (let i = 0; i < tamanhoVetor; i++) {
+        menorId = i
+        for (let j = i + 1; j < tamanhoVetor; j++) {
+            if (vetor[menorId] > vetor[j]) menorId = j                                    
+        }
+
+        let aux = vetor[i]
+    vetor[i] = vetor[menorId]
+        vetor[menorId] = aux 
+    }
+
+    console.log(`Vetor ordenado: ${vetor}`)
+
+    Insertion sort
+    let vetor = [1, 0, 9, 2, 7, 13, 1]
+    for (let i = 1, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
+        let chave = vetor[i],
+            j = i - 1
+
+        while (j >= 0 && vetor[j] > chave) {
+            vetor[j + 1] = vetor[j]
+            j--
+        }
+        vetor[j + 1] = chave
+    }
+
+    console.log(`Vetor ordenado: ${vetor}`)
+}
 ____________________________________________________________________________________________________
 18)
 console.log("exercício 18")
+let vetor = [],
+    somaPares = 0,
+    multiplicacaoImpares = 1
 
+for (let i = 0; i < 10; i++) {
+    vetor[i] = Math.floor(Math.random() * (11 - 1)) + 1
+
+    vetor[i] % 2 === 0 ? somaPares += vetor[i] : multiplicacaoImpares *= vetor[i]                                
+}
+
+console.log(`Vetor: ${vetor}\nSoma dos pares: ${somaPares}\nMultiplicação ímpares: ${multiplicacaoImpares}`)
+}
 ____________________________________________________________________________________________________
 19)
 console.log("exercício 19")
+let texto = "Sem trocar que o espinho é seco.\nSem trocar que seco é ser sol.\nSem trocar que algum espinho seco secará."
+console.log(texto)
 
+let vetorTexto = texto.split(" ")
+
+for (let i = 0, tamanhoVetor = vetorTexto.length; i < tamanhoVetor; i++) {
+    if (vetorTexto[i] === "trocar") {
+        vetorTexto[i] = "sacar"
+    }
+}
+
+texto = vetorTexto.join(" ")
+console.log(texto)
+}
 ____________________________________________________________________________________________________
 20)console.log("exercício 20)
+let notas = [],
+    acumuladorNotas = 0
+
+for (let i = 0; i < 10; i++) {
+    notas[i] = +prompt(`Digite a ${i + 1}a nota`)
+    acumuladorNotas += notas[i]
+}
+
+let media = acumuladorNotas / 10
+
+console.log(`Notas: ${notas}\nMédia: ${media.toFixed(2)}\nNotas acima da média:`)
+for (let i = 0; i < 10; i++) {
+    if (notas[i] > media) {
+        console.log(notas[i])
+    }
+}
 
 ____________________________________________________________________________________________________
 21)
 console.log("exercício 21")
+let produtos = [],
+    precos = [],
+    produtosPrecoEspecial = [],
+    inferior50 = 0,
+    acumuladorMaior100 = 0,
+    contadorMaior100 = 0
+
+for (let i = 0; i < 5; i++) {
+    produtos[i] = prompt(`Digite o nome do ${i + 1} produto`)
+    precos[i] = +prompt(`Digite o preço do ${i + 1} produto`)
+
+    if (precos[i] < 50) {
+        inferior50++
+    } else if (precos[i] <= 100) {
+        produtosPrecoEspecial.push(produtos[i])
+    } else {
+        acumuladorMaior100 += precos[i]
+        contadorMaior100++
+    }
+}   
+
+let mediaPrecosMaior100 = acumuladorMaior100 / contadorMaior100
+
+console.log(`Produtos: ${produtos}\nPreços:${precos}`)
+console.log(`Quantidade de produtos com preço inferior a R$ 50,00: ${inferior50}`)
+console.log(`Produtos com preço entre R$ 50,00 e R$ 100,00: ${produtosPrecoEspecial}`)
+console.log(`Média dos preços dos produtos com preço superior a R$ 100,00: ${mediaPrecosMaior100.toFixed(2)}`)
+}
