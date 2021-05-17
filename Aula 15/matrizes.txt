@@ -36,7 +36,6 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log(mostrarMatriz)
-}
 
 __________________________________________________________________________________________________________
 3)
@@ -60,26 +59,7 @@ for (let i = 0; i < 3; i++) {
 
 console.log(mostrarMatriz)
 
-let X = prompt("Digite um valor a ser encontrado")                
-let linha, coluna
-
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        if (matriz[i][j] === X) {
-            linha = i
-            coluna = j
-            break
-        }
-    }
-}            
-
-linha ? 
-    console.log(`Valor encontrado na posição: [${linha}][${coluna}]`) 
-: 
-    console.log("Valor não encontrado")            
-}
-
-__________________________________________________________________________________________________________
+________________________________________________________________________________________________
 4)
 console.lo("exercício 4)
 let matriz1 = [],
@@ -116,28 +96,6 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(mostrarMatriz)
-
-mostrarMatriz = ""
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        mostrarMatriz += matriz2[i][j] + "\t"
-    }
-    mostrarMatriz += "\n"
-}
-
-console.log(mostrarMatriz)
-
-
-mostrarMatriz = ""
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        mostrarMatriz += matriz3[i][j] + "\t"
-    }
-    mostrarMatriz += "\n"
-}
-
-console.log(mostrarMatriz)
-}
 
 __________________________________________________________________________________________________________
 5)

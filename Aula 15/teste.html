@@ -7,34 +7,20 @@
 </head>
 <body>
     <script>
-let matriz = []
-for (let i = 0; i < 3; i++) {
-    matriz[i] = []
-    for (let j = 0; j < 4; j++) {
-        if (j === 0) {
-            matriz[i][j] = prompt(`Digite o nome do ${i + 1} aluno`)
-        } else {
-            matriz[i][j] = +prompt(`Digite a nota do ${i + 1}o aluno`)
-        }                    
-    }
-}
+console.log("exercício2")
+let matrizIdentidade = []
 
-for (let i = 0; i < 3; i++) {                
-    let acumuladorNotas = 0
-    for (let j = 1; j < 4; j++) {
-        acumuladorNotas += matriz[i][j]
-    }
-
-    let media = acumuladorNotas / 3
-    matriz[i].push(media)
-
-    media >= 6 ? matriz[i].push("Aprovado") : matriz[i].push("Reprovado")
+for (let i = 0; i < 5; i++) {
+    matrizIdentidade[i] = []
+    for (let j = 0; j < 5; j++) {
+        i === j ? matrizIdentidade[i][j] = 1 : matrizIdentidade[i][j] = 0
+    }    
 }
 
 let mostrarMatriz = ""
-for (let i = 0, tamanhoLinhaMatriz = matriz.length; i < tamanhoLinhaMatriz; i++) {
-    for (let j = 0, tamanhoColunaMatriz = matriz[i].length; j < tamanhoColunaMatriz; j++) {
-        mostrarMatriz += matriz[i][j] + "\t"
+for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+        mostrarMatriz += matrizIdentidade[i][j] + "\t"
     }
     mostrarMatriz += "\n"
 }
