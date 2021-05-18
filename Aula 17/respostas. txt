@@ -1,0 +1,43 @@
+1)
+console.log("exercício 1")
+function ehPositivo(numero) {
+    return numero > 0
+}
+
+let numero = +prompt ("Digite um número")
+console.log(ehPositivo(numero))
+
+____________________________________________________________________________
+2)
+console.log("exercício 2")
+function retornarMenorValor() {
+    if (a < b) {
+        return a
+    }
+    return b
+}
+
+let valorA = +prompt("Qual o valor 1")
+let valorB = +prompt("Qual o valor 2")
+console.log(`O menor valor é ${minimo(valorA, valorB)}`)
+
+____________________________________________________________________________
+3)
+console.log("exercício 3)
+
+____________________________________________________________________________
+4)
+console.log("exercício 4")
+function mostrarNotas(){
+    return
+}
+let nota1 = +prompt("Digite a primeira nota")
+let nota2 = +prompt("Digite a segunda nota")
+let nota3 = +prompt("Digite a terceira nota")
+let media = (nota1 + nota2) / 3
+
+console.log(`Media do aluno ${media}`)
+
+____________________________________________________________________________
+5)
+console.log("exercicio 5")
