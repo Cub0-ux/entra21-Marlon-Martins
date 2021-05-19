@@ -7,6 +7,7 @@ function ehPositivo(numero) {
 let numero = +prompt ("Digite um número")
 console.log(ehPositivo(numero))
 
+
 ____________________________________________________________________________
 2)
 console.log("exercício 2")
@@ -21,9 +22,20 @@ let valorA = +prompt("Qual o valor 1")
 let valorB = +prompt("Qual o valor 2")
 console.log(`O menor valor é ${minimo(valorA, valorB)}`)
 
+
 ____________________________________________________________________________
 3)
 console.log("exercício 3)
+function potencia (a, b) {
+    let contaPotencia = a ** b
+    return contaPotencia
+}
+    let valorA = Number (prompt("Qual é o numero 1"))
+    let valorB = Number (prompt("Qual é o numero 2"))
+
+    let resultado = potencia(valorA, valorB)
+    console.log(` o resultado da conta é ${resultado}`)
+
 
 ____________________________________________________________________________
 4)
@@ -38,6 +50,193 @@ let media = (nota1 + nota2) / 3
 
 console.log(`Media do aluno ${media}`)
 
+
 ____________________________________________________________________________
 5)
 console.log("exercicio 5")
+function verificarMediaAluno(valorMedia) {
+if(valorMedia <5 ){
+    return "D"
+}
+else if(valorMedia <7 ){
+    return "C"
+}
+else if(valorMedia <9 ){
+    return "B"
+}
+else {
+    return "A"
+}
+}
+
+    let media = Number (prompt("Qual é a média?"))
+console.log(`o conceito da sua média é ${verificarMediaAluno(media)}`)
+
+
+____________________________________________________________________________
+6)
+console.log("exercício 6")
+function receberResultado(altura, sexo) {
+switch (sexo) {
+case "M":
+    pesoIdeal = (72.7 * altura) - 58 
+    console.log(pesoIdeal.toFixed(2))
+    break
+case "F":
+    pesoIdeal =  (62.1 * altura) - 44.7
+    console.log(pesoIdeal.toFixed(2))
+    break
+default:
+    console.log("Opção inválida")
+}
+}
+
+    let altura = Number (prompt("Qual é a sua altura?"))
+    let sexo = prompt("Qual é o seu sexo?")
+receberResultado(altura, sexo)
+
+
+____________________________________________________________________________
+7)
+console.log("exercício 7")
+let valores = [], maior, menor
+function verificaValores() {
+    for (let j = 0; j < 50; j++) {
+        if (j === 0) {
+            maior = valores[j]
+            menor = valores[j]
+        } else if (valores[j] > maior) {
+            maior = valores[j]
+        } else if (valores[j] < menor) {
+            menor = valores[j]
+        } else if (j > 48) {
+            return maior, menor
+        }
+        
+    }
+}
+for (let i = 0; i < 50; i++) {
+        valores[i] = Math.floor(Math.random() * (1000 - 1) + 1)
+    }
+verificaValores(valores)
+console.log(`O maior valor é: ${maior}\nO menor valor é: ${menor}`)
+
+____________________________________________________________________________
+8)
+console.log("exercício 8")
+function calcularTotalDias(anos ,meses ,dias){
+        return(anos * 365) + (meses * 30) + dias
+    }
+    let anos = +prompt("Quantos anos você tem")
+    let meses = +prompt("Quantos mêses você tem")
+    let dias = +prompt("Quantos dias você tem")
+
+    let totalDias = calcularTotalDias(anos,meses,dias)
+    console.log(`Seu total de dias de vida é ${totalDias}`)
+
+____________________________________________________________________________
+9)
+console.log("exercício 9")
+let primo = numero 
+let i = 0
+let p = 1
+
+for (i = 2; i < numero; i++){
+    if(numero % i == 0) {
+        p = 0
+    }
+}
+
+let Num = +prompt("Digite um numero:")
+
+Resultado = Primo(Num)
+
+if(Resultado == 1){
+    console.log("Número primo\n")
+}
+else{
+    console.log("Número não é primo")
+}
+
+
+____________________________________________________________________________
+10)
+console.log("exercício 10")
+function calcularFatorial(numero){
+    let fatorial=1
+    for (let i = numero; i >= 1; i--){
+        fatorial*=i
+    }
+    return(fatorial)
+}
+
+let numero = +prompt("Digite um número")
+let fatorialNumero = calcularFatorial(numero)
+fatorialNumero == 1 && numero != 1 ? console.log("Digite um valor válido!") : console.log(`O numero ${numero} tem resultado fatorial = ${fatorialNumero}`)
+
+
+____________________________________________________________________________
+11)
+console.log("exercício 11")
+function ehPerfeito(numero){
+    let perfeito = 0
+    for (let i = 1; i <=numero-1; i++){
+        if (numero%i==0){
+            perfeito+=i
+        }
+    }
+    if (perfeito == numero){
+        return(true)
+    }
+}
+
+let numero = +prompt("Digite um número ")
+ehPerfeito(numero) ? console.log("é perfeito") : console.log("não é perfeito")
+
+____________________________________________________________________________
+12)
+console.log("execício 12")
+let vetor = []
+function armazenarValores(){
+    for (let i = 0; i<50; i++){
+    let numero = Math.floor((Math.random()*1000-1)+1)
+    vetor.push(numero)
+    }
+}
+armazenarValores()
+console.log(vetor)
+function ordenarValores(lista){
+    let guardar = 0
+    for (let i = 0; i<50; i++){
+        for (let j = 0; j<50; j++){
+        if (lista[j]>lista[i]){
+            guardar = lista[j]
+            lista[j] = lista[i]
+            lista[i] = guardar
+        }
+        }
+    }
+    return(lista)
+}
+console.log(ordenarValores(vetor))
+
+
+____________________________________________________________________________
+13)
+console.log("exercício 13")
+let a = +prompt("Digite valor de A")
+    let b = +prompt("Digite valor de B")
+    let c = +prompt("Digite valor de C")
+
+    function calcularDelta(a,b,c) {
+        let delta = b ** 2 - 4 * a * c
+        return(delta)
+    }
+    delta = calcularDelta(a,b,c)
+    delta < 0 ? console.log("Equação não possui números reais") : calcularBhaskara(a,b,c,delta)
+
+    function calcularBhaskara(a,b,c,delta) {
+        let bhaskarapositivo = (-b + (delta) ** (1/2))/2 * a
+        let bhaskaranegativo = (-b - (delta) ** (1/2)) /2 * a
+        return(bhaskarapositivo,bhaskaranegativo)
+    }

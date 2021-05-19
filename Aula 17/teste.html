@@ -7,16 +7,32 @@
 </head>
 <body>
     <script>
-        function retornarMenorValor() {
-            if (a < b) {
-                return a
-            }
-            return b
+let vetor = []
+console.log("execício 12")
+let vetor = []
+function armazenarValores(){
+    for (let i = 0; i<50; i++){
+    let numero = Math.floor((Math.random()*1000-1)+1)
+    vetor.push(numero)
+    }
+}
+armazenarValores()
+console.log(vetor)
+function ordenarValores(lista){
+    let guardar = 0
+    for (let i = 0; i<50; i++){
+        for (let j = 0; j<50; j++){
+        if (lista[j]>lista[i]){
+            guardar = lista[j]
+            lista[j] = lista[i]
+            lista[i] = guardar
         }
-        
-        let valorA = +prompt("Qual o valor 1")
-        let valorB = +prompt("Qual o valor 2")
-        console.log(`O menor valor é ${minimo(valorA, valorB)}`)
+        }
+    }
+    return(lista)
+}
+console.log(ordenarValores(vetor))
+
     </script>
 </body>
 </html>
