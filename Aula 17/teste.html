@@ -7,31 +7,29 @@
 </head>
 <body>
     <script>
-let vetor = []
-console.log("execício 12")
-let vetor = []
-function armazenarValores(){
-    for (let i = 0; i<50; i++){
-    let numero = Math.floor((Math.random()*1000-1)+1)
-    vetor.push(numero)
-    }
-}
-armazenarValores()
-console.log(vetor)
-function ordenarValores(lista){
-    let guardar = 0
-    for (let i = 0; i<50; i++){
-        for (let j = 0; j<50; j++){
-        if (lista[j]>lista[i]){
-            guardar = lista[j]
-            lista[j] = lista[i]
-            lista[i] = guardar
+        let vetor = []
+        function armazenarValores(){
+            for (let i = 0; i<50; i++){
+            let numero = Math.floor((Math.random()*1000-1)+1)
+            vetor.push(numero)
+            }
         }
+        armazenarValores()
+        console.log(vetor)
+        function ordenarValores(lista){
+            let guardar = 0
+            for (let i = 0; i<50; i++){
+                for (let j = 0; j<50; j++){
+                if (lista[j]>lista[i]){
+                    guardar = lista[j]
+                    lista[j] = lista[i]
+                    lista[i] = guardar
+                }
+                }
+            }
+            return(lista)
         }
-    }
-    return(lista)
-}
-console.log(ordenarValores(vetor))
+        console.log(ordenarValores(vetor))
 
     </script>
 </body>
