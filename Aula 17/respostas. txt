@@ -46,7 +46,7 @@ function mostrarNotas(){
 let nota1 = +prompt("Digite a primeira nota")
 let nota2 = +prompt("Digite a segunda nota")
 let nota3 = +prompt("Digite a terceira nota")
-let media = (nota1 + nota2) / 3
+let media = (nota1 + nota2 + nota3 ) / 3
 
 console.log(`Media do aluno ${media}`)
 
@@ -55,51 +55,49 @@ ____________________________________________________________________________
 5)
 console.log("exercicio 5")
 function verificarMediaAluno(valorMedia) {
-if(valorMedia <5 ){
-    return "D"
+        if(valorMedia < 5 ) {
+        return "D"
 }
-else if(valorMedia <7 ){
+else if(valorMedia < 7 ) {
     return "C"
 }
-else if(valorMedia <9 ){
+else if(valorMedia < 9 ) {
     return "B"
 }
 else {
     return "A"
-}
+    }
 }
 
-    let media = Number (prompt("Qual é a média?"))
+let media = +prompt("Qual é a média?")
 console.log(`o conceito da sua média é ${verificarMediaAluno(media)}`)
 
 
 ____________________________________________________________________________
 6)
 console.log("exercício 6")
-function receberResultado(altura, sexo) {
-switch (sexo) {
-case "M":
-    pesoIdeal = (72.7 * altura) - 58 
-    console.log(pesoIdeal.toFixed(2))
-    break
-case "F":
-    pesoIdeal =  (62.1 * altura) - 44.7
-    console.log(pesoIdeal.toFixed(2))
-    break
-default:
-    console.log("Opção inválida")
-}
-}
+function verificarPesoIdeal(altura,sexo) {
+        switch(sexo){
+            
+            case "M":
+                return (72.7 * altura - 58)
+            case "F":
+                return(62.1 * altura - 44.7)
+        }
+    }
+    let altura = +prompt("Digite sua altura")
+    let sexo = prompt("Informe seu sexo, utilizando apenas M ou F").toUpperCase()
+    let peso = verificarPesoIdeal(altura,sexo)
 
-    let altura = Number (prompt("Qual é a sua altura?"))
-    let sexo = prompt("Qual é o seu sexo?")
-receberResultado(altura, sexo)
-
+peso ? console.log(`Seu peso ideal é ${peso.toFixed(2)}`) :
+console.log("Seu sexo foi digitado errado tente novamente!")
 
 ____________________________________________________________________________
 7)
 console.log("exercício 7")
-let valores = [], maior, menor
+let valores = [] 
+let maior 
+let menor
 function verificaValores() {
     for (let j = 0; j < 50; j++) {
         if (j === 0) {
@@ -111,15 +109,15 @@ function verificaValores() {
             menor = valores[j]
         } else if (j > 48) {
             return maior, menor
-        }
-        
+        }     
     }
 }
 for (let i = 0; i < 50; i++) {
         valores[i] = Math.floor(Math.random() * (1000 - 1) + 1)
     }
 verificaValores(valores)
-console.log(`O maior valor é: ${maior}\nO menor valor é: ${menor}`)
+console.log(`Maior valor é ${maior}\n Menor valor é ${menor}`)
+
 
 ____________________________________________________________________________
 8)
@@ -128,8 +126,8 @@ function calcularTotalDias(anos ,meses ,dias){
         return(anos * 365) + (meses * 30) + dias
     }
     let anos = +prompt("Quantos anos você tem")
-    let meses = +prompt("Quantos mêses você tem")
-    let dias = +prompt("Quantos dias você tem")
+    let meses = +prompt("Mês do seu aniversário")
+    let dias = +prompt("Dia do seu aniversário")
 
     let totalDias = calcularTotalDias(anos,meses,dias)
     console.log(`Seu total de dias de vida é ${totalDias}`)
@@ -137,79 +135,75 @@ function calcularTotalDias(anos ,meses ,dias){
 ____________________________________________________________________________
 9)
 console.log("exercício 9")
-let primo = numero 
-let i = 0
-let p = 1
-
-for (i = 2; i < numero; i++){
-    if(numero % i == 0) {
-        p = 0
+function retornaDivisores(numero){
+    let totalDivisores = 0
+    for (let i = 1; i <= numero; i++){
+        if (numero % i == 0){
+            totalDivisores++
+        }
     }
+    return(totalDivisores)
 }
+let numero = +prompt("Digite um número")
 
-let Num = +prompt("Digite um numero:")
-
-Resultado = Primo(Num)
-
-if(Resultado == 1){
-    console.log("Número primo\n")
-}
-else{
-    console.log("Número não é primo")
-}
+let divisoresNumero = retornaDivisores(numero)
+divisoresNumero ? console.log(`O número ${numero} tem ${divisoresNumero} divisores`) : 
+console.log("Digite um valor válido")
 
 
 ____________________________________________________________________________
 10)
 console.log("exercício 10")
-function calcularFatorial(numero){
-    let fatorial=1
-    for (let i = numero; i >= 1; i--){
-        fatorial*=i
+function calcularFatorial(numero) {
+    let fatorial = 1
+    for (let i = numero; i >= 1; i--) {
+        fatorial *= i
     }
     return(fatorial)
 }
 
 let numero = +prompt("Digite um número")
 let fatorialNumero = calcularFatorial(numero)
-fatorialNumero == 1 && numero != 1 ? console.log("Digite um valor válido!") : console.log(`O numero ${numero} tem resultado fatorial = ${fatorialNumero}`)
+fatorialNumero == 1 && numero != 1 ? console.log("Digitar valor válido") : 
+console.log(`O número ${numero} tem resultado fatorial ${fatorialNumero}`)
 
 
 ____________________________________________________________________________
 11)
 console.log("exercício 11")
-function ehPerfeito(numero){
-    let perfeito = 0
-    for (let i = 1; i <=numero-1; i++){
-        if (numero%i==0){
-            perfeito+=i
-        }
-    }
-    if (perfeito == numero){
-        return(true)
-    }
-}
+let soma = 0
+    function perfeito(numero){
+        for(let i = 2; i < numero ; i++)
+        if (numero % i == 0)
+        soma += i
+        soma++
 
-let numero = +prompt("Digite um número ")
-ehPerfeito(numero) ? console.log("é perfeito") : console.log("não é perfeito")
+ if(soma == numero)
+  console.log("perfeito")
+ else
+  console.log("não é perfeito")
+}
+  let numero = +prompt("Digite um número")  
+   perfeito(numero)
+
 
 ____________________________________________________________________________
 12)
 console.log("execício 12")
 let vetor = []
-function armazenarValores(){
-    for (let i = 0; i<50; i++){
-    let numero = Math.floor((Math.random()*1000-1)+1)
+function armazenarValores() {
+    for (let i = 0; i < 50; i++) {
+    let numero = Math.floor((Math.random() * 1000 - 1)+1)
     vetor.push(numero)
     }
 }
 armazenarValores()
 console.log(vetor)
-function ordenarValores(lista){
+function ordenarValores(lista) {
     let guardar = 0
-    for (let i = 0; i<50; i++){
-        for (let j = 0; j<50; j++){
-        if (lista[j]>lista[i]){
+    for (let i = 0; i < 50; i++) {
+        for (let j = 0; j<50; j++) {
+        if (lista[j] > lista[i]) {
             guardar = lista[j]
             lista[j] = lista[i]
             lista[i] = guardar
