@@ -1,0 +1,15 @@
+.bodycentralizado {
+    text-align: center;
+    background-color: rgb(190, 189, 189);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto-azul {
+    color: blue;
+}
+.autor {
+    font-weight: bolder;
+    font-style: italic;
+}
+.linhapreta {
+    border: 1px solid black;
+}
