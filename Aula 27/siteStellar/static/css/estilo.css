@@ -1,11 +1,120 @@
 body {            
-    background-image: url(imagens/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);                       
-                      
-    background-position: center;
-    background-size: cover;            
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-image: url(imagens/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    font-family: 'Source Sans Pro', sans-serif;
+}  
+
+.wrapper {
+    width: 85%;
+    margin: auto;
 }
-#myHeader {
-    
+
+.main-header {
+    text-align: center;
+}
+
+.fundo-branco {
+    background-color: white;
+}
+                      
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: white;
+}
+
+.nav {
+    top: 0;
+    position: sticky;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.911);
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    padding: 10px;
+}
+.bloco{
+    text-align: center;
+    margin: 10%;
+    font-size: 120%;
+}
+
+.bloco h1{
+    text-align: center;
+    font-size: 250%;
+    font-weight: normal;
+
+}
+
+.bloco p{
+    font-size: 150%;
+}
+
+.bloquinho {
+ margin-right: 10%;
+ margin-left: 10%;
+}
+
+.bloco ul{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    color: white;
+}
+
+.bloco li{
+    list-style: none;
+    float: left;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 20%;
+}
+.bloquinho>ul>li>h2{
+    margin:0%;
+   }
+
+
+.bloquinho>ul>li>p {
+    margin:0%;
+   }
+   
+   
+.bloquinho>ul>li>i {
+    font-size: 250%;
+    color: white;
+}
+
+#primeiro{
+    background-color: #efa8b0;
+}
+
+#segundo{
+    background-color: #c79cc8;
+}
+#terceiro{
+    background-color: #aa9fcc;
+}
+#quarto{
+background-color: #9bb2e1;
+}
+
+#quinto{
+    background-color:#8cc9f0 ;
+}
+
+.bloquinho ul {
+    text-align: center;
+}
+
+.bloquinho li {
+    display: inline-block;
+    width: 15%;
+    box-sizing: border-box;
 }

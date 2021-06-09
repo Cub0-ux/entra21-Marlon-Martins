@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/2301278610.js" crossorigin="anonymous"></script>
     <title>index</title>
 </head>
 <body>
-</header><center>
+    <div class="wrapper">
+    <header class="main-header">
         <img src="static/img/logo.svg" alt="logo do site">
         <h1>Stellar</h1>
         <p>Just another free, fully responsive site template
@@ -18,11 +20,10 @@
         <a href="https://twitter.com/ajlkn">@ajlkn</a>
         for
         <a href="https://html5up.net">HTML5 UP</a>
-        .
-    </center>
-        <div>
         </p>
-        <nav>
+    </header>
+    <div class="fundo-branco">
+        <nav class="nav">
             <ul>
                 <li><a href="#">Introduction</a></li>
                 <li><a href="#">First Selection</a></li>
@@ -55,20 +56,34 @@
         <h2>Ipsum consequat</h2>
         <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br>
             posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-        <i class="fas fa-code-branch"></i>
-        <strong>5,120</strong>"Etiam"
-        <i class="far fa-folder-open"></i>
-        <strong>8,192</strong>"Magna"
-        <i class="fas fa-signal"></i>
-        <strong>2,048</strong>"Tempus"
-        <i class="fas fa-laptop"></i>
-        <strong>4,096</strong>"Aliquam"
-        <i class="fa fa-diamond"></i>
-        <strong>1,024</strong>"Nullam"
+            
+            <section class="bloquinho">
+                <ul>
+                    <li id="primeiro" >
+                        <i class="fas fa-code-branch"></i>
+                        <h2>5,120</h2>
+                        <p>Etiam</p>
+                    </li><li id="segundo"><i class="far fa-folder-open"></i>
+                        <h2>8,192</h2>
+                        <p>Magna</p>
+                    </li><li id="terceiro">
+                        <i class="fas fa-signal"></i>
+                        <h2>2,048</h2>
+                        <p>Tempus</p>
+                    </li><li id="quarto"><i class="fas fa-laptop"></i>
+                        <h2>4,096</h2>
+                        <p>Aliquam</p>
+                    </li><li id="quinto"><i class="fa fa-diamond"></i>
+                        <h2>1,024</h2>
+                        <p>Nullam</p>
+                    </li>
+        </ul>
+        </section>
+
         <P>Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</P>
         <nav>
             <ul>
-                <li><a href="generic.html" class="button">Learn More</a></li>
+                <li><a href="generic.html" class="button">Learn More</a></li></section>
             </ul>
         </nav>
         <hr>
@@ -85,6 +100,7 @@
             </ul>
         </nav>
     </div>
+        
         <footer id="footer">
             <section>
                 <h2>Aliquam sed mauris</h2>
@@ -113,6 +129,6 @@
             </section>
             <p class="copyright">© Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>. Demo Images: <a href="https://unsplash.com">Unsplash</a>.</p>
         </footer>
-    </header>
+    </div>
 </body>
 </html>
